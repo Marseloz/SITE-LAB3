@@ -4,84 +4,117 @@
         <meta charset="utf-8">
         <meta name="description" content="Резюме Обутова-Замалетдинова Марселя Каймановича">
         <title>Моё резюме</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
         <link href="./css/normalize.css" rel="stylesheet">
+        <link href="./css/style.css" rel="stylesheet">
         <link rel="icon" type="image/png" href="./img/main-logo.png">
     </head>
     <body>
-        <header>
-            <img src="./img/main-logo.svg" alt="main-logo" width="50" height="50">
-            <nav>
-                <a href="#about">Обо мне</a>
-                <a href="#skills">Навыки</a>
-                <a href="#interests">Интересы</a>
-                <a href="#contacts">Контакты</a>
-            </nav>
-        </header>
-        <main>
-            <section>
-                <div><!-- для управления расположением элементов по вертикали-->
-                    <h1>Марсель Обутов</h1>
-                    <h2>Программист</h2>
-                </div>
-                <div>
-                    <img src="./img/user.png" alt="user-photo" width="300" height="300">
-                </div>
-            </section>
-            <section id="about">
-                <h2>Пара слов обо мне</h2>
-                <p>Привет ✌</p>
-                <p>В данный момент я учусь в магистратуре МФ МГТУ им. Н. Э. Баумана по направлению «Информатика и вычисли­тельная техника».</p>
-                <p>В прошлом году защитил диплом бакалавра на тему «Разработка очень сложного программного комплекса для супер-важной цели». Работа была высоко оценена комиссией.</p>
-                <p>Также я уже успел поработать инженером в одном провайдере в Пушкино, но в будущем планирую стать разработчиком сложных программных комплексов и систем.</p>
-            </section>
-            <section id="skills">
-                <h2>Мои навыки</h2>
-                <div>
-                    Сортировать
-                    <button>по названию</button>
-                    <button>по уровню</button>
-                </div>
-            </section>
-            <dl>
-                <dt>c++</dt>
-                <dd>
-                    <div style="width: 40%;">40%</div>
-                </dd>
-                <dt>c</dt>
-                <dd>
-                    <div style="width: 40%;">40%</div>
-                </dd>
-                <dt>html</dt>
-                <dd>
-                    <div style="width: 40%;">40%</div>
-                </dd>
-                <dt>css</dt>
-                <dd>
-                    <div style="width: 40%;">40%</div>
-                </dd>
-            </dl>
-            <section id="interests">
-                <h2>Мои интересы</h2>
-                <p>Наибольший интерес для меня в данный момент представляет программирование и изучение искусственного интеллекта.</p>
-                <p>Но помимо учёбы и работы я также люблю играть на барабанах и читать зарубежную классику.</p>
-            </section>
-            <section id="contacts">
-                <h2>Мои контакты</h2>
-                <div>
-                    <a href="tel:+79991234567">+7 999 123-45-67</a>
-                    <a href="mailto:email@mail.ru">email@mail.ru</a>
-                </div>
-            </section>
-            <div>
-                <a href=#>GitHub</a>
-                <a href=#>GitLub</a>
-                <a href=#>VK</a>
-                <a href=#>Instagram</a>
-                <a href=#>Telegram</a>
+        <div class="container">
+            <header class="main-header">
+                <img src="./img/main-logo.svg" alt="main-logo" width="50" height="50">
+                <nav class="main-nav">
+                    <a href="#about">Обо мне</a>
+                    <a href="#skills">Навыки</a>
+                    <a href="#interests">Интересы</a>
+                    <a href="#contacts">Контакты</a>
+                </nav>
+            </header>
+            <main>
+                <section class="section-intro">
+                    <div><!-- для управления расположением элементов по вертикали-->
+                        <h1>Марсель Обутов</h1>
+                        <h2>Программист</h2>
+                    </div>
+                    <div>
+                        <img src="./img/user.png" alt="user-photo" width="300" height="300">
+                    </div>
+                </section>
+                <section id="about" class="section-about">
+                    <h2>Пара слов обо мне</h2>
+                    <p>Привет ✌</p>
+                    <p>В данный момент я учусь в магистратуре МФ МГТУ им. Н. Э. Баумана по направлению «Информатика и вычисли­тельная техника».</p>
+                    <p>В прошлом году защитил диплом бакалавра на тему «Разработка очень сложного программного комплекса для супер-важной цели». Работа была высоко оценена комиссией.</p>
+                    <p>Также я уже успел поработать инженером в одном провайдере в Пушкино, но в будущем планирую стать разработчиком сложных программных комплексов и систем.</p>
+                </section>
+                <section id="skills" class="section-skills">
+                    <h2>Мои навыки</h2>
+                    <div>
+                        Сортировать
+                        <button>по названию</button>
+                        <button>по уровню</button>
+                    </div>
+                    <dl class="skill-list">
+                        <dt class="skill-item skill-item_cpp">c++</dt>
+                        <dd class="skill-level">
+                            <div style="width: 40%;">40%</div>
+                        </dd>
+                        <dt class="skill-item skill-item_c">c</dt>
+                        <dd class="skill-level">
+                            <div style="width: 40%;">40%</div>
+                        </dd>
+                        <dt class="skill-item skill-item_html">html</dt>
+                        <dd class="skill-level">
+                            <div style="width: 40%;">40%</div>
+                        </dd>
+                        <dt class="skill-item skill-item_css">css</dt>
+                        <dd class="skill-level">
+                            <div style="width: 40%;">40%</div>
+                        </dd>
+                    </dl>
+                </section>
+
+                <section id="interests" class="section-interests">
+                    <h2>Мои интересы</h2>
+                    <p>Наибольший интерес для меня в данный момент представляет программирование и изучение искусственного интеллекта.</p>
+                    <p>Но помимо учёбы и работы я также люблю играть на барабанах и читать зарубежную классику.</p>
+                </section>
+                <section id="contacts" class="section-contacts">
+                    <h2>Мои контакты</h2>
+                    <ul class="contact">
+                        <li>
+                            <a class="contact-link contact-link_phone" href="tel:+79991234567">+7 999 123-45-67</a>
+                        </li>
+                        <li>
+                            <a class="contact-link contact-link_email" href="mailto:email@mail.ru">email@mail.ru</a>
+                        </li>
+                    </ul>
+                    <ul class="social">
+                        <li>
+                            <a class="social-link social-link_github" href=#>
+                                <span class="visually-hidden">GitHub</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-link social-link_gitlab" href=#>
+                                <span class="visually-hidden"> GitLab</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-link social-link_vk" href=#>
+                                <span class="visually-hidden">VK</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-link social-link_instagram" href=#>
+                                <span class="visually-hidden">Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-link social-link_telegram" href=#>
+                                <span class="visually-hidden">Telegram</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+        <footer class="main-footer">
+            <div class="container">
+                <p>© 2025 Марсель Обутов</p>
             </div>
-        </main>
-        <footer>
-            <p>© 2025 Марсель Обутов</p>
         </footer>
     </body>
 </html>
