@@ -24,12 +24,16 @@ body {
 h1 {
     font-weight: 700;
     font-size: 60px;
+    margin: 0;
+    margin-bottom: 20px;
 }
 
 h2 {
     font-weight: 700;
     font-size: 30px;
     line-height: 1.2;
+    margin: 0;
+    margin-bottom: 40px;
 }
 
 h3 {
@@ -45,6 +49,7 @@ button a {
 }
 
 .subtitle {
+    margin: 0;
     font-weight: 400;
     font-size: 38px;
     line-height: 1.2;
@@ -64,7 +69,6 @@ footer {
 }
 
 .main-nav a{
-    display: inline-block;
     padding: 10px 15px 10px 15px;
     color:var(--txt-color);
     text-decoration:none;
@@ -89,10 +93,11 @@ button:hover {
 }
 
 .social {
-    display: inline-block;
+    display: flex;
     margin: 0;
     padding: 0;
     list-style-type: none;
+    gap: 20px;
 }
 .social li {
     display: inline-block;
@@ -148,8 +153,10 @@ button:hover {
 }
 
 .contact {
+    display: flex;
     padding: 0;
     margin: 0;
+    margin-bottom: 40px;
 }
 
 .contact-link{
@@ -245,3 +252,66 @@ li{
     background-image: url("../img/c.svg");
 }
 
+.main-header {
+    display: flex;
+    padding-top: 60px;
+    gap: 40px;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+}
+
+.section-intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.section-intro div {
+    display: flex;
+    flex-direction:column;
+    flex-grow: 1;
+    margin-right: 70px;
+    justify-content: center;
+}
+
+.text-wrapper {
+    max-width: 800px;
+}
+
+p {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+.skills-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.skills-head div {
+    display: flex;
+    margin: 0;
+    gap: 20px;
+}
+
+.skills-head h2 {
+    margin: 0;
+}
+
+.main-footer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+section, .main-header {
+    padding-bottom: 120px;
+}
