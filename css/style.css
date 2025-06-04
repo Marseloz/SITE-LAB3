@@ -54,6 +54,8 @@ button a {
     font-size: 38px;
     line-height: 1.2;
     color: var(--green);
+    margin-top: -10px;
+    padding-bottom: 11px;
 }
 
 footer {
@@ -164,7 +166,7 @@ button:hover {
     background-repeat: no-repeat;
     background-position: 0px;
     text-decoration:none;
-    padding: 5px 0px 5px 42px;
+    padding-left: 42px;
     margin-right: 40px;
     color: var(--txt-color);
 }
@@ -213,11 +215,15 @@ li{
 
 
 .skill-level {
-    margin: 4px 0 20px;
+    margin: 4px 0 18px;
     padding: 2px;
     font-size: 0;
     border: 1px solid var(--txt-color);
     border-radius: 16px;
+}
+
+.skill-level:last-child {
+    margin: 0;
 }
 
 
@@ -301,6 +307,11 @@ p:last-child {
     display: flex;
     margin: 0;
     gap: 20px;
+}
+
+.skills-head p {
+    margin: 0;
+    padding-top: 3px;
 }
 
 .skills-head h2 {
