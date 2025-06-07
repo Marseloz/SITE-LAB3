@@ -159,6 +159,7 @@ button:hover {
     padding: 0;
     margin: 0;
     margin-bottom: 40px;
+    gap: 40px;
 }
 
 .contact-link{
@@ -167,7 +168,6 @@ button:hover {
     background-position: 0px;
     text-decoration:none;
     padding-left: 42px;
-    margin-right: 40px;
     color: var(--txt-color);
 }
 
@@ -273,13 +273,13 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 70px;
 }
 
 .section-intro div {
     display: flex;
     flex-direction:column;
     flex-grow: 1;
-    margin-right: 70px;
     justify-content: center;
 }
 
@@ -301,6 +301,7 @@ p:last-child {
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 40px;
+    gap: 20px;
 }
 
 .skills-head div {
