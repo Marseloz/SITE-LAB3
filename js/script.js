@@ -9,7 +9,7 @@ skillList.data = [
 skillList.generateList = function(elem) {
     let buff = ""
     elem.data.forEach((item) => {
-        buff += "<dt class=\"skill-item\" style=\"background-image: url(../img/"+item.image+")\">"+item.name+"</dt>"
+        buff += "<dt class=\"skill-item\" style=\"background-image: url(img/"+item.image+")\">"+item.name+"</dt>"
         buff += "<dd class=\"skill-level\">"
         buff += "<div style=\"width: "+item.num+"%;\">"+item.num+"%</div></dd>"
     })
