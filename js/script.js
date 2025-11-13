@@ -1,21 +1,27 @@
-skillList = document.querySelector("dl.skill-list");
+let skillList = document.querySelector("dl.skill-list");
+console.log(skillList);
 skillList.data = [
-   {name:"c++", num:50, css:"skill-item_cpp", image:"c++.svg"},
-    {name:"c", num:30, css:"skill-item_c", image:"c.svg"},
-    {name:"html", num:20, css:"skill-item_html", image:"html.svg"},
-    {name:"css", num:20, css:"skill-item_css", image:"css.svg"}
+    {name:"c++", num:50, image:"c++.svg"},
+    {name:"c", num:30,image:"c.svg"},
+    {name:"html", num:20, image:"html.svg"},
+    {name:"css", num:20, image:"css.svg"}
 ];
 
 skillList.generateList = function(elem) {
-    let buff = ""
     elem.data.forEach((item) => {
-        buff += "<dt class=\"skill-item\" style=\"background-image: url(img/"+item.image+")\">"+item.name+"</dt>"
-        buff += "<dd class=\"skill-level\">"
-        buff += "<div style=\"width: "+item.num+"%;\">"+item.num+"%</div></dd>"
+        let dt = document.createElement("dt");
+        dt.style.backgroundImage = "url(img/"+item.image+")";
+        dt.className = "skill-item"
+        dt.textContent = item.name;
+        elem.append(dt);
+        let div = document.createElement("div");
+        div.style.width = item.num + "%";
+        div.textContent = item.num + "%";
+        let dd = document.createElement("dd");
+        dd.className = "skill-level"
+        dd.append(div)
+        elem.append(dd);
     })
-    elem.innerHTML = buff
 }
 
-console.log(skillList)
-
-skillList.generateList(skillList)
+skillList.generateList(skillList);
