@@ -7,7 +7,7 @@ const skills = {
         {name:"css", level:20, image:"css.svg"} 
     ],
     sortMode: null,
-    init(text) { this.elem = document.querySelector(text); },
+    init(selector) { this.elem = document.querySelector(selector); },
     generateList() {
         this.elem.innerHTML = "";
         this.data.forEach((item) => {
