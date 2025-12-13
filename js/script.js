@@ -49,8 +49,6 @@ const skills = {
             this.sortMode = object_sort;
         }
     }
-
-
 }
 
 skills.init("dl.skill-list");

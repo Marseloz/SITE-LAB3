@@ -576,8 +576,16 @@ section, .main-header {
     --bg-color:#031923;
 }
 
+.dark-theme footer {
+    background-color: var(--green);
+}
+
 .dark-theme .social-link {
     background-color: #CCCCCC;
+}
+
+.dark-theme .social-link:hover{
+    background-color: var(--green);
 }
 
 .dark-theme .contact-link_phone{

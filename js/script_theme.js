@@ -1,25 +1,25 @@
 const checkbox = document.querySelector("input.switch-checkbox"), 
-body = document.querySelector("body");
+body_obj = document.querySelector("body");
 if(localStorage.getItem('status_checkbox') === null){
-    localStorage.setItem('status_checkbox', true);
+    localStorage.setItem('status_checkbox', 'light');
 }
 
-function update(status){
+function changeTheme(status){
     switch (status) {
         case true:
-            body.classList.remove('dark-theme');
-            localStorage.setItem("status_checkbox", status);
+            body_obj.classList.remove('dark-theme');
+            localStorage.setItem('status_checkbox', 'light');
             break;
         case false:
-            body.classList.add('dark-theme');
-            localStorage.setItem("status_checkbox", status);
+            body_obj.classList.add('dark-theme');
+            localStorage.setItem('status_checkbox', 'dark');
             break;
     }
 }
 
-checkbox.checked = localStorage.getItem('status_checkbox') === 'true';
-update(checkbox.checked);
+checkbox.checked = localStorage.getItem('status_checkbox') === 'light';
+changeTheme(checkbox.checked);
 
 checkbox.addEventListener('change', () => {
-    update(checkbox.checked);
+    changeTheme(checkbox.checked);
 })
