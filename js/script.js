@@ -1,18 +1,42 @@
-const skills = {
+    function getComparer(prop) {
+        return function (a, b) {
+            if (a[prop] < b[prop]) {
+                return -1;
+            }
+            
+            if (a[prop] > b[prop]) {
+                return 1;
+            }
+
+            return 0;
+        }
+    }
+
+    const skills = {
+    data: [],
     elem: null,
-    data: [ 
-        {name:"c++", level:50, image:"c++.svg"},
-        {name:"c", level:30,image:"c.svg"},
-        {name:"html", level:20, image:"html.svg"},
-        {name:"css", level:20, image:"css.svg"} 
-    ],
     sortMode: null,
-    init(selector) { this.elem = document.querySelector(selector); },
+    getData(path){
+        fetch(path)
+            .then(value => value.json())
+            .then((result) => {
+                this.data = result;
+                this.generateList();
+            })
+            .catch(() => {
+                console.error('что-то пошло не так')
+                this.elem.parentElement.style.display = "none";
+            });
+    },
+    init(selector) { 
+        this.elem = document.querySelector(selector); 
+        this.getData('db/skills.json');
+    },
     generateList() {
         this.elem.innerHTML = "";
         this.data.forEach((item) => {
             const dt = document.createElement("dt");
-            dt.style.backgroundImage = "url(img/"+item.image+")";
+            dt.style.backgroundImage = "url(img/"+item.icone+")";
             dt.className = "skill-item";
             dt.textContent = item.name;
             this.elem.append(dt);
@@ -27,32 +51,18 @@ const skills = {
             this.elem.append(dd);
         })
     },
-    getComparer(prop) {
-        return function (a, b) {
-            if (a[prop] < b[prop]) {
-                return -1;
-            }
-            
-            if (a[prop] > b[prop]) {
-                return 1;
-            }
-
-            return 0;
-        }
-    },
     sortList(object_sort) {
         if(this.sortMode === object_sort) {
             this.data.reverse();
         }
         else {
-            this.data.sort(this.getComparer(object_sort));
+            this.data.sort(getComparer(object_sort));
             this.sortMode = object_sort;
         }
     }
 }
 
 skills.init("dl.skill-list");
-skills.generateList();
 
 const skills_sort = document.querySelector("div.skills-sort");
 
