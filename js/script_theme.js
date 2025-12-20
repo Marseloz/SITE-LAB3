@@ -1,5 +1,5 @@
-const checkbox = document.querySelector("input.switch-checkbox"), 
-body_obj = document.querySelector("body");
+const checkbox = document.querySelector("input.switch-checkbox");
+const body_obj = document.querySelector("body");
 if(localStorage.getItem('status_checkbox') === null){
     localStorage.setItem('status_checkbox', 'light');
 }

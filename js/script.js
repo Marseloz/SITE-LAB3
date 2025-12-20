@@ -16,6 +16,7 @@
     data: [],
     elem: null,
     sortMode: null,
+
     getData(path){
         fetch(path)
             .then(value => value.json())
@@ -28,15 +29,17 @@
                 this.elem.parentElement.style.display = "none";
             });
     },
-    init(selector) { 
+
+    init(selector, path) { 
         this.elem = document.querySelector(selector); 
-        this.getData('db/skills.json');
+        this.getData(path);
     },
+
     generateList() {
         this.elem.innerHTML = "";
         this.data.forEach((item) => {
             const dt = document.createElement("dt");
-            dt.style.backgroundImage = "url(img/"+item.icone+")";
+            dt.style.backgroundImage = `url(img/${item.icone})`;
             dt.className = "skill-item";
             dt.textContent = item.name;
             this.elem.append(dt);
@@ -51,6 +54,7 @@
             this.elem.append(dd);
         })
     },
+
     sortList(object_sort) {
         if(this.sortMode === object_sort) {
             this.data.reverse();
@@ -62,7 +66,7 @@
     }
 }
 
-skills.init("dl.skill-list");
+skills.init("dl.skill-list", "db/skills.json");
 
 const skills_sort = document.querySelector("div.skills-sort");
 
